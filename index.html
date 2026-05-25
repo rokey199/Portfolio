@@ -1,193 +1,20 @@
-export default function PortfolioHome() { return ( <div className="min-h-screen bg-[#0F172A] text-white overflow-hidden"> {/* Background Glow */} <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div> <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{/* Navbar */}
-  <nav className="flex items-center justify-between px-8 py-6 relative z-10">
-    <h1 className="text-2xl font-bold tracking-wide">
-      Kishan<span className="text-cyan-400">.Dev</span>
-    </h1>
+    <title>Kishan Portfolio</title>
 
-    <div className="flex gap-6 text-sm text-gray-300">
-      <a href="#about" className="hover:text-cyan-400 transition">About</a>
-      <a href="#skills" className="hover:text-cyan-400 transition">Skills</a>
-      <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
-      <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
-    </div>
-  </nav>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  {/* Hero Section */}
-  <section className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-28">
-    <div className="bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-2 rounded-full text-sm text-cyan-300 mb-6 shadow-lg">
-      Frontend & React JS Developer
-    </div>
+  <body>
+    <div id="root"></div>
 
-    <h1 className="text-5xl md:text-7xl font-extrabold leading-tight max-w-5xl">
-      Crafting <span className="text-cyan-400">Modern</span> Digital
-      <br />
-      Experiences with <span className="text-purple-400">Code</span>
-    </h1>
-
-    <p className="mt-6 text-gray-300 max-w-2xl text-lg leading-relaxed">
-      Passionate developer focused on React JS, UI/UX, Shopify,
-      WordPress, Python, and modern frontend experiences.
-    </p>
-
-    <div className="flex gap-4 mt-10 flex-wrap justify-center">
-      <button className="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 rounded-xl font-semibold transition shadow-lg shadow-cyan-500/30">
-        View Projects
-      </button>
-
-      <button className="px-8 py-3 border border-white/20 hover:border-cyan-400 rounded-xl font-semibold transition bg-white/5 backdrop-blur-lg">
-        Contact Me
-      </button>
-    </div>
-  </section>
-
-  {/* About Section */}
-  <section id="about" className="px-8 py-24 relative z-10">
-    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 className="text-4xl font-bold mb-6">
-          About <span className="text-cyan-400">Me</span>
-        </h2>
-
-        <p className="text-gray-300 leading-relaxed text-lg">
-          I am a passionate Frontend Developer and React JS enthusiast
-          focused on building responsive, modern, and visually engaging
-          digital experiences. Skilled in React JS, Tailwind CSS,
-          Shopify, WordPress, Python, and UI/UX design.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-2 gap-6">
-        {[
-          "React JS",
-          "Tailwind CSS",
-          "Shopify",
-          "WordPress",
-        ].map((skill, index) => (
-          <div
-            key={index}
-            className="bg-white/10 border border-white/10 backdrop-blur-xl p-6 rounded-3xl hover:-translate-y-2 transition duration-300 shadow-lg"
-          >
-            <h3 className="text-xl font-semibold text-cyan-300">
-              {skill}
-            </h3>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* Skills */}
-  <section id="skills" className="px-8 py-24 relative z-10">
-    <div className="max-w-6xl mx-auto text-center">
-      <h2 className="text-4xl font-bold mb-14">
-        My <span className="text-purple-400">Skills</span>
-      </h2>
-
-      <div className="grid md:grid-cols-3 gap-8">
-        {[
-          "React JS",
-          "JavaScript",
-          "Tailwind CSS",
-          "Python",
-          "Shopify",
-          "UI/UX Design",
-        ].map((skill, index) => (
-          <div
-            key={index}
-            className="bg-white/10 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:scale-105 transition duration-300"
-          >
-            <h3 className="text-2xl font-semibold text-cyan-300">
-              {skill}
-            </h3>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* Projects */}
-  <section id="projects" className="px-8 py-24 relative z-10">
-    <div className="max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-16">
-        Featured <span className="text-cyan-400">Projects</span>
-      </h2>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-          {
-            title: "NovaCart Ecommerce",
-            desc: "Modern ecommerce platform using React JS and Tailwind CSS.",
-          },
-          {
-            title: "React Portfolio",
-            desc: "Animated portfolio website with modern UI/UX.",
-          },
-          {
-            title: "Shopify Fashion Store",
-            desc: "Premium Shopify ecommerce storefront.",
-          },
-          {
-            title: "WordPress Business Site",
-            desc: "Responsive corporate website with Elementor.",
-          },
-          {
-            title: "AI Automation Tool",
-            desc: "AI workflow and automation project using Python.",
-          },
-          {
-            title: "Landing Page Collection",
-            desc: "Modern responsive startup landing pages.",
-          },
-        ].map((project, index) => (
-          <div
-            key={index}
-            className="group bg-white/10 border border-white/10 backdrop-blur-xl p-8 rounded-3xl hover:-translate-y-3 transition duration-500 shadow-xl"
-          >
-            <div className="h-48 rounded-2xl bg-gradient-to-br from-cyan-500/30 to-purple-500/30 mb-6"></div>
-
-            <h3 className="text-2xl font-bold mb-3 text-cyan-300">
-              {project.title}
-            </h3>
-
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              {project.desc}
-            </p>
-
-            <button className="px-5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold">
-              View Project
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* Contact */}
-  <section id="contact" className="px-8 py-24 relative z-10">
-    <div className="max-w-4xl mx-auto bg-white/10 border border-white/10 backdrop-blur-xl rounded-3xl p-10 text-center shadow-2xl">
-      <h2 className="text-4xl font-bold mb-6">
-        Contact <span className="text-purple-400">Me</span>
-      </h2>
-
-      <p className="text-gray-300 text-lg mb-10">
-        Available for Freelance & Full-Time Opportunities.
-      </p>
-
-      <div className="flex flex-col gap-4 text-lg">
-        <p>
-          📧 dabhikishan199@gmail.com
-        </p>
-        <p>
-          📞 +91 7046095482
-        </p>
-        <p>
-          📍 Gujarat, India
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-
-); }
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
