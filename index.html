@@ -1,1 +1,153 @@
 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishan P. Dabhi | Premium Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        dark: { 900: '#0F172A', 800: '#111827' },
+                        accent: { cyan: '#06B6D4', blue: '#38BDF8', purple: '#8B5CF6' }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0F172A; color: white; overflow-x: hidden; }
+        .glass-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+            transform: translateY(-5px);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #38BDF8, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-glow {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(15,23,42,0) 70%);
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            z-index: -1; pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased relative selection:bg-accent-blue selection:text-white">
+
+    <!-- Ambient Background Glow -->
+    <div class="bg-glow animate-pulse-slow"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-cyan/10 blur-[120px] rounded-full mix-blend-screen pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 py-6 px-10 flex justify-between items-center glass-card border-x-0 border-t-0 border-b-white/5 rounded-none">
+        <div class="font-bold tracking-widest text-lg">KPD.</div>
+        <div class="hidden md:flex gap-8 text-sm text-gray-400">
+            <a href="#about" class="hover:text-white transition-colors">About</a>
+            <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <button class="px-5 py-2 text-sm bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all">Resume</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative z-10">
+        <div class="animate-float mb-6">
+            <span class="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20">
+                AVAILABLE FOR HIRE
+            </span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-4xl leading-tight">
+            Crafting Digital Experiences with <br>
+            <span class="text-gradient">Code & Creativity.</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 font-light">
+            I'm <span class="text-white font-medium">Kishan Pravinbhai Dabhi</span>, a Frontend & React JS Developer building visually unforgettable, industry-ready web products.
+        </p>
+
+        <div class="flex gap-4">
+            <a href="#projects" class="px-8 py-4 bg-white text-dark-900 font-semibold rounded-full hover:scale-105 transition-transform duration-300">
+                View Projects
+            </a>
+            <a href="#contact" class="px-8 py-4 glass-card text-white font-medium rounded-full hover:bg-white/5 transition-all duration-300">
+                Contact Me
+            </a>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 px-6 max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-20">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Featured Work</h2>
+            <p class="text-gray-400">Premium startup products and frontend showcases.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="glass-card p-8 rounded-3xl group cursor-pointer">
+                <div class="h-64 bg-dark-800 rounded-2xl mb-8 overflow-hidden relative border border-white/5 group-hover:border-accent-blue/30 transition-colors">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-medium">NovaCart Mockup Image</div>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">NovaCart</h3>
+                <p class="text-gray-400 mb-6 text-sm leading-relaxed">Modern ecommerce frontend built using React JS and Tailwind CSS with responsive design, product filtering, and premium shopping UI.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-full">React JS</span>
+                    <span class="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-full">Tailwind CSS</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card p-8 rounded-3xl group cursor-pointer mt-0 md:mt-12">
+                <div class="h-64 bg-dark-800 rounded-2xl mb-8 overflow-hidden relative border border-white/5 group-hover:border-accent-purple/30 transition-colors">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-medium">EliteWear Mockup Image</div>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">EliteWear</h3>
+                <p class="text-gray-400 mb-6 text-sm leading-relaxed">Premium Shopify ecommerce storefront designed for fashion and lifestyle products with a conversion-focused experience.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-full">Shopify</span>
+                    <span class="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-full">Liquid</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-20 text-center border-t border-white/5 relative z-10">
+        <h2 class="text-4xl font-bold mb-6">Let's Build Something</h2>
+        <p class="text-gray-400 mb-8 max-w-md mx-auto">Available for Freelance & Full-Time Opportunities. Reach out to discuss your next big project.</p>
+        <a href="mailto:dabhikishan199@gmail.com" class="text-2xl font-semibold text-accent-cyan hover:text-white transition-colors block mb-12">
+            dabhikishan199@gmail.com
+        </a>
+        <div class="text-sm text-gray-500">
+            © 2026 Kishan P. Dabhi. Located in Gujarat, India.
+        </div>
+    </footer>
+
+</body>
+</html>
